@@ -38,7 +38,11 @@
         ellipse at 88% 4%,
         rgba(12, 91, 84, 0.08),
         transparent 38%
-      );
+      ),
+      linear-gradient(to right, rgba(20, 25, 28, 0.032) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(20, 25, 28, 0.032) 1px, transparent 1px);
+    background-size: auto, auto, 32px 32px, 32px 32px;
+    background-attachment: fixed;
   }
 
   ::selection {
@@ -62,5 +66,39 @@
       linear-gradient(to right, rgba(20, 25, 28, 0.055) 1px, transparent 1px),
       linear-gradient(to bottom, rgba(20, 25, 28, 0.055) 1px, transparent 1px);
     background-size: 28px 28px;
+  }
+
+  .coverage-signal-grid {
+    background-image:
+      linear-gradient(to right, rgba(243, 239, 228, 0.12) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(243, 239, 228, 0.12) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  .coverage-signal__scan {
+    animation: coverage-scan 5s ease-in-out infinite;
+    box-shadow: 0 0 18px rgba(197, 138, 45, 0.85);
+  }
+
+  .coverage-signal__axis {
+    box-shadow: 0 0 12px rgba(243, 239, 228, 0.2);
+  }
+
+  @keyframes coverage-scan {
+    0%, 100% {
+      opacity: 0.35;
+      transform: translateY(0);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(360px);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .coverage-signal__scan {
+      animation: none;
+      opacity: 0.75;
+    }
   }
 }

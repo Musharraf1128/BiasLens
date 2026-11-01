@@ -13,6 +13,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 import SiteHeader from "@/components/site-header";
+import CoverageSignal from "@/components/coverage-signal";
 import { TopNewsFeedSchema, type TopNewsFeed, type TopNewsGroup, type TopNewsSource } from "@/lib/top-news-schema";
 
 const groupStyles: Record<TopNewsGroup, { label: string; bar: string; ink: string }> = {
@@ -194,46 +195,51 @@ export default function TopNews({
     <div className="min-h-screen">
       <SiteHeader tinyfishConfigured={tinyfishConfigured} active="news" outletCount={feed.monitored_outlets} />
       <main className="mx-auto max-w-[1500px] px-5 lg:px-10">
-        <section className="grid gap-10 border-b border-rule py-10 lg:grid-cols-[minmax(0,1fr)_360px] lg:py-16">
-          <div>
-            <div className="flex items-center gap-2 font-mono text-[10px] text-teal">
-              <Rss className="h-3.5 w-3.5" />
-              A wider first read · {feed.monitored_outlets} configured sources
-            </div>
-            <h1 className="mt-6 max-w-5xl font-display text-[clamp(3.5rem,8vw,8.25rem)] leading-[0.82] tracking-[-0.05em]">
-              Top news,
-              <br />
-              seen sideways.
-            </h1>
-            <p className="mt-8 max-w-2xl text-[1.04rem] leading-relaxed text-ink-soft">
-              Start with the stories appearing across the spectrum, then open one in the Fact Checker to compare its shared facts and framing with evidence.
-            </p>
-          </div>
-          <aside className="border-l border-rule pl-5 lg:pt-3">
-            <div className="flex items-center justify-between gap-4">
-              <span className="font-mono text-[10px] text-ink-soft">Feed status</span>
-              <span className="inline-flex items-center gap-2 font-mono text-[9px] text-teal">
-                <CheckCircle2 className="h-3.5 w-3.5" /> {statusLabel}
-              </span>
-            </div>
-            <div className="mt-5 border-y border-rule py-4">
-              <div className="font-display text-2xl leading-none">{feed.stories.length} story bundles</div>
-              <p className="mt-2 text-[12px] leading-relaxed text-ink-soft">
-                Search window: {Math.round(feed.search_window_minutes / 60)} hours · refreshed {formatTime(feed.generated_at)}
+        <section className="border-b border-rule py-9 lg:py-12">
+          <div className="grid items-center gap-8 lg:grid-cols-[minmax(0,1fr)_330px] lg:gap-10">
+            <div>
+              <div className="flex items-center gap-2 font-mono text-[10px] text-teal">
+                <Rss className="h-3.5 w-3.5" />
+                A wider first read · {feed.monitored_outlets} configured sources
+              </div>
+              <h1 className="mt-6 max-w-5xl font-display text-[clamp(3.5rem,8vw,8.25rem)] leading-[0.82] tracking-[-0.05em]">
+                Top news,
+                <br />
+                seen sideways.
+              </h1>
+              <p className="mt-8 max-w-2xl text-[1.04rem] leading-relaxed text-ink-soft">
+                Start with the stories appearing across the spectrum, then open one in the Fact Checker to compare its shared facts and framing with evidence.
               </p>
             </div>
-            <button
-              type="button"
-              onClick={refresh}
-              disabled={refreshing || !tinyfishConfigured}
-              className="mt-5 inline-flex w-full items-center justify-center gap-2 border border-ink px-4 py-3 font-mono text-[10px] text-ink transition-colors hover:bg-ink hover:text-paper disabled:cursor-not-allowed disabled:opacity-45"
-            >
-              {refreshing ? <LoaderCircle className="h-3.5 w-3.5 animate-spin" /> : <RefreshCw className="h-3.5 w-3.5" />}
-              {refreshing ? "Searching sources" : "Refresh latest sources"}
-            </button>
-            {!tinyfishConfigured ? <p className="mt-3 font-mono text-[9px] leading-relaxed text-amber">Add TINYFISH_API_KEY server-side to refresh the live feed.</p> : null}
-            {feed.search_failures > 0 ? <p className="mt-3 font-mono text-[9px] leading-relaxed text-amber">{feed.search_failures} source search{feed.search_failures === 1 ? "" : "es"} failed; this feed is partial.</p> : null}
-          </aside>
+            <CoverageSignal story={feed.stories[0] ?? null} />
+          </div>
+        </section>
+
+        <section className="border-b border-rule py-4">
+          <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center">
+            <div className="flex flex-wrap items-center gap-x-5 gap-y-2 font-mono text-[10px] text-ink-soft">
+              <span className="inline-flex items-center gap-2">
+                <CheckCircle2 className="h-3.5 w-3.5 text-teal" />
+                {statusLabel}
+              </span>
+              <span>{feed.stories.length} story bundles</span>
+              <span>Search window: {Math.round(feed.search_window_minutes / 60)} hours</span>
+              <span className="hidden xl:inline">Refreshed {formatTime(feed.generated_at)}</span>
+            </div>
+            <div className="flex flex-wrap items-center gap-3">
+              {!tinyfishConfigured ? <p className="font-mono text-[9px] leading-relaxed text-amber">Add TINYFISH_API_KEY server-side to refresh.</p> : null}
+              {feed.search_failures > 0 ? <p className="font-mono text-[9px] leading-relaxed text-amber">{feed.search_failures} search{feed.search_failures === 1 ? "" : "es"} failed.</p> : null}
+              <button
+                type="button"
+                onClick={refresh}
+                disabled={refreshing || !tinyfishConfigured}
+                className="inline-flex w-full items-center justify-center gap-2 border border-ink px-4 py-2.5 font-mono text-[10px] text-ink transition-colors hover:bg-ink hover:text-paper disabled:cursor-not-allowed disabled:opacity-45 sm:w-auto"
+              >
+                {refreshing ? <LoaderCircle className="h-3.5 w-3.5 animate-spin" /> : <RefreshCw className="h-3.5 w-3.5" />}
+                {refreshing ? "Searching sources" : "Refresh latest sources"}
+              </button>
+            </div>
+          </div>
         </section>
 
         <section className="grid gap-8 py-10 xl:grid-cols-[minmax(0,1fr)_280px]">
