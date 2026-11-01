@@ -3,20 +3,13 @@ import { Activity } from "lucide-react";
 
 function LensMark() {
   return (
-    <svg
-      viewBox="0 0 40 40"
+    <span
       aria-hidden="true"
-      className="h-10 w-10 text-ink"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.25"
+      className="relative grid h-10 w-10 place-items-center border border-ink bg-ink"
     >
-      <circle cx="20" cy="20" r="18.4" />
-      <path d="M20 1.6v36.8" opacity="0.55" />
-      <path d="M20 20 34.8 7.2" opacity="0.4" />
-      <path d="M20 20 34.8 32.8" opacity="0.4" />
-      <circle cx="20" cy="20" r="3.2" className="fill-amber stroke-none" />
-    </svg>
+      <span className="font-sans text-[11px] font-semibold tracking-[-0.12em] text-paper">BL</span>
+      <span className="absolute bottom-1.5 left-1.5 h-1.5 w-1.5 bg-amber" />
+    </span>
   );
 }
 

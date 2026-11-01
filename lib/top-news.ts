@@ -1,5 +1,6 @@
 import { cacheGet, cacheKey, cacheSet, sha256 } from "@/lib/cache";
 import { outlets, thresholds, type Group, type Outlet } from "@/lib/config";
+import { findRelatedImage } from "@/lib/story-images";
 import {
   TopNewsFeedSchema,
   type TopNewsFeed,
@@ -113,6 +114,16 @@ function chooseStories(bundles: Bundle[], limit: number): Bundle[] {
   return selected;
 }
 
+async function attachRelatedImages(feed: TopNewsFeed): Promise<{ feed: TopNewsFeed; changed: boolean }> {
+  if (!feed.stories.some((story) => story.related_image_version !== "v4")) return { feed, changed: false };
+  const stories = await mapLimit(feed.stories, 3, async (story) => ({
+    ...story,
+    related_image: story.related_image_version === "v4" ? story.related_image : await findRelatedImage(story.title),
+    related_image_version: "v4" as const,
+  }));
+  return { feed: TopNewsFeedSchema.parse({ ...feed, stories }), changed: true };
+}
+
 async function mapLimit<T, R>(
   items: T[],
   limit: number,
@@ -224,12 +235,20 @@ export async function getTopNewsFeed(options: {
 
   if (!options.forceRefresh) {
     const cached = await cacheGet<TopNewsFeed>(key);
-    if (cached) return { feed: TopNewsFeedSchema.parse(cached), cached: true };
+    if (cached) {
+      const enriched = await attachRelatedImages(TopNewsFeedSchema.parse(cached));
+      if (enriched.changed) await cacheSet(key, enriched.feed, thresholds.top_news_cache_ttl_seconds);
+      return { feed: enriched.feed, cached: true };
+    }
   }
 
   const cached = await cacheGet<TopNewsFeed>(key);
   if (!tinyfishReady()) {
-    if (cached) return { feed: TopNewsFeedSchema.parse(cached), cached: true };
+    if (cached) {
+      const enriched = await attachRelatedImages(TopNewsFeedSchema.parse(cached));
+      if (enriched.changed) await cacheSet(key, enriched.feed, thresholds.top_news_cache_ttl_seconds);
+      return { feed: enriched.feed, cached: true };
+    }
     return {
       feed: TopNewsFeedSchema.parse({
         generated_at: new Date().toISOString(),
@@ -288,11 +307,11 @@ export async function getTopNewsFeed(options: {
     }
   }
 
-  const feed = makeFeed({
+  const enriched = await attachRelatedImages(makeFeed({
     candidates,
     failed: attempts.filter((attempt) => attempt.failed).length,
     fetchedByUrl,
-  });
-  await cacheSet(key, feed, thresholds.top_news_cache_ttl_seconds);
-  return { feed, cached: false };
+  }));
+  await cacheSet(key, enriched.feed, thresholds.top_news_cache_ttl_seconds);
+  return { feed: enriched.feed, cached: false };
 }

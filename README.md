@@ -34,6 +34,8 @@ what was found for the configured outlets and time window.
 
 ## The 90-second demo
 
+> 🎥 **Watch the walkthrough:** [BiasLens demo video](artifacts/biaslens_demo.mkv)
+
 ### 1. Start with the news, not a blank input
 
 Open the **Top News** page at `/`. BiasLens uses TinyFish Search to look across

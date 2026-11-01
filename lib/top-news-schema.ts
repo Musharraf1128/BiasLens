@@ -25,6 +25,13 @@ export const TopNewsSourceSchema = z.object({
   excerpt_verified: z.boolean(),
 });
 
+export const RelatedImageSchema = z.object({
+  image_url: z.url(),
+  source_url: z.url(),
+  alt: z.string().min(1).max(240),
+  credit: z.string().min(1).max(120),
+});
+
 export const TopNewsStorySchema = z.object({
   id: z.string().min(1),
   title: z.string().min(1),
@@ -35,6 +42,8 @@ export const TopNewsStorySchema = z.object({
   sources: z.array(TopNewsSourceSchema).min(1),
   outlet_count: z.number().int().min(1),
   orientation: OrientationSchema,
+  related_image: RelatedImageSchema.nullable().optional(),
+  related_image_version: z.enum(["v2", "v3", "v4"]).optional(),
 });
 
 export const TopNewsFeedSchema = z.object({
@@ -50,3 +59,4 @@ export const TopNewsFeedSchema = z.object({
 export type TopNewsSource = z.infer<typeof TopNewsSourceSchema>;
 export type TopNewsStory = z.infer<typeof TopNewsStorySchema>;
 export type TopNewsFeed = z.infer<typeof TopNewsFeedSchema>;
+export type RelatedImage = z.infer<typeof RelatedImageSchema>;

@@ -14,6 +14,7 @@ next-env.d.ts
 !.env.example
 
 # local cache and generated artifacts
+.presentation-build/
 data/cache/*
 !data/cache/.gitkeep
 data/mock/*

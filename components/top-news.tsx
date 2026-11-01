@@ -14,6 +14,7 @@ import { useState } from "react";
 
 import SiteHeader from "@/components/site-header";
 import CoverageSignal from "@/components/coverage-signal";
+import StoryVisual from "@/components/story-visual";
 import { TopNewsFeedSchema, type TopNewsFeed, type TopNewsGroup, type TopNewsSource } from "@/lib/top-news-schema";
 
 const groupStyles: Record<TopNewsGroup, { label: string; bar: string; ink: string }> = {
@@ -102,48 +103,48 @@ function SourceLine({ source }: { source: TopNewsSource }) {
   );
 }
 
-function StoryCard({ story }: { story: TopNewsFeed["stories"][number] }) {
+function StoryCard({ story, index }: { story: TopNewsFeed["stories"][number]; index: number }) {
   return (
-    <article className="border-b border-rule py-8 first:pt-0">
-      <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(260px,0.58fr)]">
-        <div>
-          <div className="flex flex-wrap items-center gap-2 font-mono text-[9px] text-ink-soft">
-            <span className="text-teal">{story.outlet_count} outlet{story.outlet_count === 1 ? "" : "s"} found this story</span>
-            <span>·</span>
-            <span>{story.excerpt_verified ? "Lead read by TinyFish" : "Search preview"}</span>
-          </div>
-          <h2 className="mt-3 max-w-3xl font-display text-[clamp(2rem,4vw,3.25rem)] leading-[0.95] tracking-[-0.025em]">
-            {story.title}
-          </h2>
-          {story.excerpt ? (
-            <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-ink-soft">
-              {story.excerpt_verified ? "“" : ""}{story.excerpt}{story.excerpt_verified ? "”" : ""}
-            </p>
-          ) : null}
-          <OrientationBar story={story} />
-          <div className="mt-5 flex flex-wrap items-center gap-3">
-            <Link
-              href={`/analyze?input=${encodeURIComponent(story.title)}`}
-              className="inline-flex items-center gap-2 bg-ink px-4 py-3 font-mono text-[10px] text-paper transition-colors hover:bg-teal"
-            >
-              Check this story <ArrowUpRight className="h-3.5 w-3.5" />
-            </Link>
-            <a
-              href={story.representative_url}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 border border-rule px-4 py-3 font-mono text-[10px] text-ink-soft hover:border-ink hover:text-ink"
-            >
-              Open representative source <ExternalLink className="h-3 w-3" />
-            </a>
-          </div>
+    <article className="min-w-0 border border-rule bg-paper/45 p-5 lg:p-6">
+      <div className="flex flex-wrap items-center gap-2 font-mono text-[9px] text-ink-soft">
+        <span className="text-teal">{story.outlet_count} outlet{story.outlet_count === 1 ? "" : "s"} found this story</span>
+        <span>·</span>
+        <span>{story.excerpt_verified ? "Lead read by TinyFish" : "Search preview"}</span>
+      </div>
+      <h2 className="mt-3 max-w-3xl font-display text-[clamp(2rem,4vw,3.25rem)] leading-[0.95] tracking-[-0.025em]">
+        {story.title}
+      </h2>
+      {story.excerpt ? (
+        <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-ink-soft">
+          {story.excerpt_verified ? "“" : ""}{story.excerpt}{story.excerpt_verified ? "”" : ""}
+        </p>
+      ) : null}
+      <StoryVisual story={story} index={index} />
+      <OrientationBar story={story} />
+      <div className="mt-5 flex flex-wrap items-center gap-3">
+        <Link
+          href={`/analyze?input=${encodeURIComponent(story.title)}`}
+          className="inline-flex items-center gap-2 bg-ink px-4 py-3 font-mono text-[10px] text-paper transition-colors hover:bg-teal"
+        >
+          Check this story <ArrowUpRight className="h-3.5 w-3.5" />
+        </Link>
+        <a
+          href={story.representative_url}
+          target="_blank"
+          rel="noreferrer"
+          className="inline-flex items-center gap-2 border border-rule px-4 py-3 font-mono text-[10px] text-ink-soft hover:border-ink hover:text-ink"
+        >
+          Open representative source <ExternalLink className="h-3 w-3" />
+        </a>
+      </div>
+      <div className="mt-8 border-t border-rule pt-5">
+        <div className="flex items-center justify-between gap-4 font-mono text-[10px] text-ink-soft">
+          <span>Source trail</span>
+          <span>{story.sources.length} linked source{story.sources.length === 1 ? "" : "s"}</span>
         </div>
-        <div className="border-l border-rule pl-5">
-          <div className="font-mono text-[10px] text-ink-soft">Source trail</div>
-          <ul className="mt-3 divide-y divide-ink/10 border-y border-ink/10">
-            {story.sources.map((source) => <SourceLine key={`${story.id}-${source.outlet_id}-${source.url}`} source={source} />)}
-          </ul>
-        </div>
+        <ul className="mt-3 divide-y divide-ink/10 border-y border-ink/10">
+          {story.sources.map((source) => <SourceLine key={`${story.id}-${source.outlet_id}-${source.url}`} source={source} />)}
+        </ul>
       </div>
     </article>
   );
@@ -242,11 +243,11 @@ export default function TopNews({
           </div>
         </section>
 
-        <section className="grid gap-8 py-10 xl:grid-cols-[minmax(0,1fr)_280px]">
-          <div>
+        <section className="grid gap-6 py-10 md:grid-cols-2">
+          <div className="contents">
             {error ? <div className="mb-7 border border-alert/35 bg-alert/5 px-4 py-4 text-sm text-ink">{error}</div> : null}
-            {feed.stories.length > 0 ? feed.stories.map((story) => <StoryCard key={story.id} story={story} />) : (
-              <div className="grid min-h-[360px] place-items-center border border-dashed border-rule px-8 py-16 text-center">
+            {feed.stories.length > 0 ? feed.stories.map((story, index) => <StoryCard key={story.id} story={story} index={index} />) : (
+              <div className="col-span-full grid min-h-[360px] place-items-center border border-dashed border-rule px-8 py-16 text-center">
                 <div className="max-w-md">
                   <Search className="mx-auto h-6 w-6 text-ink-soft" />
                   <h2 className="mt-5 font-display text-3xl leading-none">No source trail yet</h2>
@@ -255,17 +256,6 @@ export default function TopNews({
               </div>
             )}
           </div>
-          <aside className="border-l border-rule pl-5">
-            <div className="font-mono text-[10px] text-amber">How to read this page</div>
-            <div className="mt-4 space-y-5 text-[12px] leading-relaxed text-ink-soft">
-              <p>The bar measures which configured source groups covered the same story bundle. It is a coverage map, not a truth or quality score.</p>
-              <p>Search previews come from TinyFish Search. A lead marked “read by TinyFish” was also fetched; every original headline remains linked.</p>
-              <p>Use Fact Checker when you want the stricter pass: relevance, claims, consensus, framing, and verified coverage checks.</p>
-            </div>
-            <Link href="/analyze" className="mt-6 inline-flex items-center gap-2 font-mono text-[10px] text-teal hover:text-ink">
-              Open Fact Checker <ArrowUpRight className="h-3 w-3" />
-            </Link>
-          </aside>
         </section>
       </main>
       <footer className="border-t border-rule">
