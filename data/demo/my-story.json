@@ -1,0 +1,518 @@
+{
+  "id": "my-story",
+  "cached_at": "2026-11-01T06:40:49.235Z",
+  "input": {
+    "type": "topic",
+    "value": "student protest for resignation of education minster"
+  },
+  "notes": "Captured from a completed BiasLens analysis; derived results only.",
+  "result": {
+    "event": {
+      "event_id": "ba25a9cd-a589-498d-9943-19ecf9fbc4b5",
+      "canonical_title": "student protest for resignation of education minster",
+      "query": "student protest for resignation of education minster",
+      "timestamp_updated": "2026-11-01T06:40:42.805Z"
+    },
+    "payload": {
+      "event_id": "ba25a9cd-a589-498d-9943-19ecf9fbc4b5",
+      "canonical_title": "student protest for resignation of education minster",
+      "timestamp_updated": "2026-11-01T06:40:49.221Z",
+      "consensus_fact_core": [],
+      "blind_spot_alerts": [],
+      "spectrum_breakdown": {
+        "left": {
+          "article_count": 0,
+          "average_slant_score": 0,
+          "dominant_mfc_frame": "Other",
+          "perspective_summary": "",
+          "detected_persuasion_techniques": [],
+          "key_entity_roles": []
+        },
+        "center": {
+          "article_count": 0,
+          "average_slant_score": 0,
+          "dominant_mfc_frame": "Other",
+          "perspective_summary": "",
+          "detected_persuasion_techniques": [],
+          "key_entity_roles": []
+        },
+        "right": {
+          "article_count": 1,
+          "average_slant_score": 0,
+          "dominant_mfc_frame": "Other",
+          "perspective_summary": "1 relevant article. Most common frame: Other. Framing analysis unavailable.",
+          "detected_persuasion_techniques": [],
+          "key_entity_roles": []
+        }
+      }
+    },
+    "facts": [],
+    "outlets": [
+      {
+        "outletId": "the-hindu",
+        "name": "The Hindu",
+        "domain": "thehindu.com",
+        "homepage": "https://www.thehindu.com/",
+        "group": "left",
+        "rating_source": "Media Bias Fact Check",
+        "rating_url": "https://mediabiasfactcheck.com/the-hindu/",
+        "searched": true,
+        "search_source": "live",
+        "search_results": 0,
+        "articles": [],
+        "covered": false
+      },
+      {
+        "outletId": "indian-express",
+        "name": "The Indian Express",
+        "domain": "indianexpress.com",
+        "homepage": "https://indianexpress.com/",
+        "group": "left",
+        "rating_source": "Media Bias Fact Check",
+        "rating_url": "https://mediabiasfactcheck.com/the-indian-express/",
+        "searched": true,
+        "search_source": "live",
+        "search_results": 0,
+        "articles": [],
+        "covered": false
+      },
+      {
+        "outletId": "ndtv",
+        "name": "NDTV",
+        "domain": "ndtv.com",
+        "homepage": "https://www.ndtv.com/",
+        "group": "left",
+        "rating_source": "Media Bias Fact Check",
+        "rating_url": "https://mediabiasfactcheck.com/ndtv/",
+        "searched": true,
+        "search_source": "live",
+        "search_results": 0,
+        "articles": [],
+        "covered": false
+      },
+      {
+        "outletId": "zee-news",
+        "name": "Zee News",
+        "domain": "zeenews.india.com",
+        "homepage": "https://zeenews.india.com/",
+        "group": "right",
+        "rating_source": "Media Bias Fact Check (search; direct profile not found)",
+        "rating_url": "https://mediabiasfactcheck.com/?s=zee+news",
+        "searched": true,
+        "search_source": "live",
+        "search_results": 0,
+        "articles": [],
+        "covered": false
+      },
+      {
+        "outletId": "times-of-india",
+        "name": "The Times of India",
+        "domain": "timesofindia.indiatimes.com",
+        "homepage": "https://timesofindia.indiatimes.com/",
+        "group": "right",
+        "rating_source": "Media Bias Fact Check",
+        "rating_url": "https://mediabiasfactcheck.com/times-of-india/",
+        "searched": true,
+        "search_source": "live",
+        "search_results": 0,
+        "articles": [],
+        "covered": false
+      },
+      {
+        "outletId": "republic-world",
+        "name": "Republic World",
+        "domain": "republicworld.com",
+        "homepage": "https://www.republicworld.com/",
+        "group": "right",
+        "rating_source": "Media Bias Fact Check",
+        "rating_url": "https://mediabiasfactcheck.com/republic-world/",
+        "searched": true,
+        "search_source": "live",
+        "search_results": 0,
+        "articles": [],
+        "covered": false
+      },
+      {
+        "outletId": "india-today",
+        "name": "India Today",
+        "domain": "indiatoday.in",
+        "homepage": "https://www.indiatoday.in/",
+        "group": "right",
+        "rating_source": "Media Bias Fact Check",
+        "rating_url": "https://mediabiasfactcheck.com/india-today/",
+        "searched": true,
+        "search_source": "live",
+        "search_results": 10,
+        "articles": [
+          {
+            "url": "https://www.indiatoday.in/world/video/europe-protests-clashes-in-france-demonstrations-in-italy-and-unrest-in-albania-ytvd-3024751-2026-10-25",
+            "title": "Europe Protests: Clashes in France, Demonstrations in Italy and Unrest in Albania",
+            "outletId": "india-today",
+            "outletName": "India Today",
+            "group": "right",
+            "published_at": "2026-10-25T17:37:25+05:30",
+            "status": "unavailable",
+            "fetch": "ok",
+            "claims": [],
+            "notes": [
+              "Relevance unavailable: Mock mode (LLM_MOCK=1); no data/mock/relevance.json fixture"
+            ]
+          },
+          {
+            "url": "https://www.indiatoday.in/india/video/rahul-gandhi-demands-cec-gyanesh-kumars-resignation-confirms-mega-rally-ytvd-3025990-2026-10-27",
+            "title": "Rahul Gandhi Demands CEC Gyanesh Kumar's Resignation, Confirms Mega Rally",
+            "outletId": "india-today",
+            "outletName": "India Today",
+            "group": "right",
+            "published_at": "2026-10-27T14:39:26+05:30",
+            "status": "relevant",
+            "fetch": "ok",
+            "claims": [],
+            "notes": []
+          }
+        ],
+        "covered": true
+      }
+    ],
+    "blind_spots": [
+      {
+        "group": "left",
+        "status": "quiet",
+        "omission_index": 1,
+        "overall_coverage": 0.143,
+        "claim_support": 0,
+        "coverage": {
+          "covered": 0,
+          "monitored": 3
+        },
+        "description": "Fewer than two outlets covered this event; a coverage comparison is not meaningful.",
+        "evidence": [],
+        "notes": []
+      },
+      {
+        "group": "center",
+        "status": "quiet",
+        "omission_index": 1,
+        "overall_coverage": 0.143,
+        "claim_support": 0,
+        "coverage": {
+          "covered": 0,
+          "monitored": 0
+        },
+        "description": "No monitored outlets in the Mixed group.",
+        "evidence": [],
+        "notes": []
+      },
+      {
+        "group": "right",
+        "status": "quiet",
+        "omission_index": 0,
+        "overall_coverage": 0.143,
+        "claim_support": 0,
+        "coverage": {
+          "covered": 1,
+          "monitored": 4
+        },
+        "description": "No other group covered this event, so there is nothing to compare against.",
+        "evidence": [],
+        "notes": []
+      }
+    ],
+    "consensus": {
+      "covering_outlets": 1,
+      "monitored_outlets": 7,
+      "consensus_share": 0.6,
+      "total_claims": 0
+    },
+    "mode": {
+      "llm": "mock",
+      "llm_model": null,
+      "tinyfish": "live",
+      "replay": false
+    },
+    "generated_at": "2026-11-01T06:40:49.221Z",
+    "duration_ms": 6418,
+    "caveats": [
+      "Results hold only for this event, these 7 outlets, and a 7-day search window.",
+      "\"Consensus\" means reported by at least 60% of the outlets that covered the event. It is not a claim of objectivity.",
+      "Frame, persuasion, and slant labels are model estimates; every label links to a quoted excerpt.",
+      "Group sizes: government-critical 3, government-aligned 4, mixed 0. With 3 outlets, the smallest group's coverage moves in discrete steps.",
+      "LLM stages ran in mock mode: labels come from deterministic fixtures, not live analysis.",
+      "Fewer than two outlets covered this event, so no cross-outlet consensus is shown.",
+      "No consensus facts reached the support threshold for this run."
+    ],
+    "activity": [
+      {
+        "type": "stage",
+        "stage": "anchor",
+        "status": "start",
+        "message": "Anchoring the event",
+        "at": "2026-11-01T06:40:42.804Z"
+      },
+      {
+        "type": "stage",
+        "stage": "anchor",
+        "status": "done",
+        "message": "Anchoring the event",
+        "at": "2026-11-01T06:40:42.805Z",
+        "duration_ms": 1
+      },
+      {
+        "type": "stage",
+        "stage": "search",
+        "status": "start",
+        "message": "Searching 7 outlet domains",
+        "at": "2026-11-01T06:40:42.805Z"
+      },
+      {
+        "type": "outlet",
+        "outletId": "the-hindu",
+        "name": "The Hindu",
+        "domain": "thehindu.com",
+        "group": "left",
+        "phase": "searching",
+        "at": "2026-11-01T06:40:42.805Z",
+        "detail": "student protest for resignation of education minster"
+      },
+      {
+        "type": "outlet",
+        "outletId": "indian-express",
+        "name": "The Indian Express",
+        "domain": "indianexpress.com",
+        "group": "left",
+        "phase": "searching",
+        "at": "2026-11-01T06:40:42.806Z",
+        "detail": "student protest for resignation of education minster"
+      },
+      {
+        "type": "outlet",
+        "outletId": "ndtv",
+        "name": "NDTV",
+        "domain": "ndtv.com",
+        "group": "left",
+        "phase": "searching",
+        "at": "2026-11-01T06:40:42.806Z",
+        "detail": "student protest for resignation of education minster"
+      },
+      {
+        "type": "outlet",
+        "outletId": "zee-news",
+        "name": "Zee News",
+        "domain": "zeenews.india.com",
+        "group": "right",
+        "phase": "searching",
+        "at": "2026-11-01T06:40:42.806Z",
+        "detail": "student protest for resignation of education minster"
+      },
+      {
+        "type": "outlet",
+        "outletId": "zee-news",
+        "name": "Zee News",
+        "domain": "zeenews.india.com",
+        "group": "right",
+        "phase": "no_results",
+        "at": "2026-11-01T06:40:44.551Z",
+        "count": 0,
+        "source": "live"
+      },
+      {
+        "type": "outlet",
+        "outletId": "times-of-india",
+        "name": "The Times of India",
+        "domain": "timesofindia.indiatimes.com",
+        "group": "right",
+        "phase": "searching",
+        "at": "2026-11-01T06:40:44.551Z",
+        "detail": "student protest for resignation of education minster"
+      },
+      {
+        "type": "outlet",
+        "outletId": "indian-express",
+        "name": "The Indian Express",
+        "domain": "indianexpress.com",
+        "group": "left",
+        "phase": "no_results",
+        "at": "2026-11-01T06:40:44.961Z",
+        "count": 0,
+        "source": "live"
+      },
+      {
+        "type": "outlet",
+        "outletId": "republic-world",
+        "name": "Republic World",
+        "domain": "republicworld.com",
+        "group": "right",
+        "phase": "searching",
+        "at": "2026-11-01T06:40:44.961Z",
+        "detail": "student protest for resignation of education minster"
+      },
+      {
+        "type": "outlet",
+        "outletId": "ndtv",
+        "name": "NDTV",
+        "domain": "ndtv.com",
+        "group": "left",
+        "phase": "no_results",
+        "at": "2026-11-01T06:40:45.376Z",
+        "count": 0,
+        "source": "live"
+      },
+      {
+        "type": "outlet",
+        "outletId": "india-today",
+        "name": "India Today",
+        "domain": "indiatoday.in",
+        "group": "right",
+        "phase": "searching",
+        "at": "2026-11-01T06:40:45.376Z",
+        "detail": "student protest for resignation of education minster"
+      },
+      {
+        "type": "outlet",
+        "outletId": "the-hindu",
+        "name": "The Hindu",
+        "domain": "thehindu.com",
+        "group": "left",
+        "phase": "no_results",
+        "at": "2026-11-01T06:40:45.377Z",
+        "count": 0,
+        "source": "live"
+      },
+      {
+        "type": "outlet",
+        "outletId": "times-of-india",
+        "name": "The Times of India",
+        "domain": "timesofindia.indiatimes.com",
+        "group": "right",
+        "phase": "no_results",
+        "at": "2026-11-01T06:40:46.810Z",
+        "count": 0,
+        "source": "live"
+      },
+      {
+        "type": "outlet",
+        "outletId": "republic-world",
+        "name": "Republic World",
+        "domain": "republicworld.com",
+        "group": "right",
+        "phase": "no_results",
+        "at": "2026-11-01T06:40:47.215Z",
+        "count": 0,
+        "source": "live"
+      },
+      {
+        "type": "outlet",
+        "outletId": "india-today",
+        "name": "India Today",
+        "domain": "indiatoday.in",
+        "group": "right",
+        "phase": "search_done",
+        "at": "2026-11-01T06:40:47.544Z",
+        "count": 10,
+        "source": "live"
+      },
+      {
+        "type": "stage",
+        "stage": "search",
+        "status": "done",
+        "message": "Searching 7 outlet domains",
+        "at": "2026-11-01T06:40:47.545Z",
+        "duration_ms": 4740
+      },
+      {
+        "type": "stage",
+        "stage": "fetch",
+        "status": "start",
+        "message": "Reading 2 article URLs with TinyFish Fetch",
+        "at": "2026-11-01T06:40:47.545Z"
+      },
+      {
+        "type": "outlet",
+        "outletId": "india-today",
+        "name": "India Today",
+        "domain": "indiatoday.in",
+        "group": "right",
+        "phase": "reading",
+        "at": "2026-11-01T06:40:47.545Z"
+      },
+      {
+        "type": "stage",
+        "stage": "fetch",
+        "status": "done",
+        "message": "Reading 2 article URLs with TinyFish Fetch",
+        "at": "2026-11-01T06:40:49.212Z",
+        "duration_ms": 1667
+      },
+      {
+        "type": "stage",
+        "stage": "analysis",
+        "status": "start",
+        "message": "Checking relevance, claims, and framing for 1 article",
+        "at": "2026-11-01T06:40:49.213Z"
+      },
+      {
+        "type": "outlet",
+        "outletId": "india-today",
+        "name": "India Today",
+        "domain": "indiatoday.in",
+        "group": "right",
+        "phase": "analyzing",
+        "at": "2026-11-01T06:40:49.213Z",
+        "detail": "Europe Protests: Clashes in France, Demonstrations in Italy and Unrest in Albania"
+      },
+      {
+        "type": "outlet",
+        "outletId": "india-today",
+        "name": "India Today",
+        "domain": "indiatoday.in",
+        "group": "right",
+        "phase": "unavailable",
+        "at": "2026-11-01T06:40:49.218Z",
+        "detail": "relevance"
+      },
+      {
+        "type": "stage",
+        "stage": "analysis",
+        "status": "done",
+        "message": "Checking relevance, claims, and framing for 1 article",
+        "at": "2026-11-01T06:40:49.219Z",
+        "duration_ms": 6
+      },
+      {
+        "type": "stage",
+        "stage": "consensus",
+        "status": "start",
+        "message": "Building the consensus fact core",
+        "at": "2026-11-01T06:40:49.219Z"
+      },
+      {
+        "type": "stage",
+        "stage": "consensus",
+        "status": "done",
+        "message": "Building the consensus fact core",
+        "at": "2026-11-01T06:40:49.220Z",
+        "duration_ms": 1
+      },
+      {
+        "type": "log",
+        "message": "Fewer than two outlets covered this event, so there is no cross-outlet consensus to report.",
+        "at": "2026-11-01T06:40:49.221Z"
+      },
+      {
+        "type": "stage",
+        "stage": "blindspot",
+        "status": "start",
+        "message": "Checking coverage gaps",
+        "at": "2026-11-01T06:40:49.221Z"
+      },
+      {
+        "type": "stage",
+        "stage": "blindspot",
+        "status": "done",
+        "message": "Checking coverage gaps",
+        "at": "2026-11-01T06:40:49.221Z",
+        "duration_ms": 0
+      }
+    ]
+  }
+}

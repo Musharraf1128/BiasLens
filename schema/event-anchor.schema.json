@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "EventAnchorPayload",
+  "type": "object",
+  "properties": {
+    "event_id": { "type": "string", "format": "uuid" },
+    "canonical_title": { "type": "string" },
+    "timestamp_updated": { "type": "string", "format": "date-time" },
+    "consensus_fact_core": { "type": "array", "items": { "type": "string" } },
+    "blind_spot_alerts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "omitted_spectrum": {
+            "type": "string",
+            "enum": ["Left", "Center", "Right"]
+          },
+          "omission_index": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
+          "description": { "type": "string" }
+        },
+        "required": ["omitted_spectrum", "omission_index", "description"]
+      }
+    },
+    "spectrum_breakdown": {
+      "type": "object",
+      "properties": {
+        "left": { "$ref": "#/$defs/SpectrumDetail" },
+        "center": { "$ref": "#/$defs/SpectrumDetail" },
+        "right": { "$ref": "#/$defs/SpectrumDetail" }
+      },
+      "required": ["left", "center", "right"]
+    }
+  },
+  "required": [
+    "event_id",
+    "canonical_title",
+    "timestamp_updated",
+    "consensus_fact_core",
+    "blind_spot_alerts",
+    "spectrum_breakdown"
+  ],
+  "$defs": {
+    "SpectrumDetail": {
+      "type": "object",
+      "properties": {
+        "article_count": { "type": "integer" },
+        "average_slant_score": { "type": "number", "minimum": -1.0, "maximum": 1.0 },
+        "dominant_mfc_frame": { "type": "string" },
+        "perspective_summary": { "type": "string" },
+        "detected_persuasion_techniques": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "key_entity_roles": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "entity_name": { "type": "string" },
+              "assigned_role": { "type": "string" }
+            },
+            "required": ["entity_name", "assigned_role"]
+          }
+        }
+      },
+      "required": [
+        "article_count",
+        "average_slant_score",
+        "dominant_mfc_frame",
+        "perspective_summary",
+        "detected_persuasion_techniques",
+        "key_entity_roles"
+      ]
+    }
+  }
+}

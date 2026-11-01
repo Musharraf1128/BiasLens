@@ -1,0 +1,161 @@
+{
+  "updated_at": "2026-11-01",
+  "note": "Configured sample, not an objective political ranking. Group names map to the schema fields: left = government-critical, center = mixed, right = government-aligned. Ratings are third-party labels with known disagreement, not ground truth.",
+  "groups": {
+    "left": "Government-critical",
+    "center": "Mixed",
+    "right": "Government-aligned"
+  },
+  "outlets": [
+    {
+      "id": "the-hindu",
+      "name": "The Hindu",
+      "domain": "thehindu.com",
+      "homepage": "https://www.thehindu.com/",
+      "group": "left",
+      "rating_source": "Media Bias Fact Check",
+      "rating_url": "https://mediabiasfactcheck.com/the-hindu/",
+      "rating_verified": false
+    },
+    {
+      "id": "indian-express",
+      "name": "The Indian Express",
+      "domain": "indianexpress.com",
+      "homepage": "https://indianexpress.com/",
+      "group": "left",
+      "rating_source": "Media Bias Fact Check",
+      "rating_url": "https://mediabiasfactcheck.com/the-indian-express/",
+      "rating_verified": false
+    },
+    {
+      "id": "ndtv",
+      "name": "NDTV",
+      "domain": "ndtv.com",
+      "homepage": "https://www.ndtv.com/",
+      "group": "left",
+      "rating_source": "Media Bias Fact Check",
+      "rating_url": "https://mediabiasfactcheck.com/ndtv/",
+      "rating_verified": false
+    },
+    {
+      "id": "zee-news",
+      "name": "Zee News",
+      "domain": "zeenews.india.com",
+      "homepage": "https://zeenews.india.com/",
+      "group": "right",
+      "rating_source": "Media Bias Fact Check (search; direct profile not found)",
+      "rating_url": "https://mediabiasfactcheck.com/?s=zee+news",
+      "rating_verified": false
+    },
+    {
+      "id": "times-of-india",
+      "name": "The Times of India",
+      "domain": "timesofindia.indiatimes.com",
+      "homepage": "https://timesofindia.indiatimes.com/",
+      "group": "right",
+      "rating_source": "Media Bias Fact Check",
+      "rating_url": "https://mediabiasfactcheck.com/times-of-india/",
+      "rating_verified": false
+    },
+    {
+      "id": "republic-world",
+      "name": "Republic World",
+      "domain": "republicworld.com",
+      "homepage": "https://www.republicworld.com/",
+      "group": "right",
+      "rating_source": "Media Bias Fact Check",
+      "rating_url": "https://mediabiasfactcheck.com/republic-world/",
+      "rating_verified": false
+    },
+    {
+      "id": "india-today",
+      "name": "India Today",
+      "domain": "indiatoday.in",
+      "homepage": "https://www.indiatoday.in/",
+      "group": "right",
+      "rating_source": "Media Bias Fact Check",
+      "rating_url": "https://mediabiasfactcheck.com/india-today/",
+      "rating_verified": false
+    },
+    {
+      "id": "the-wire",
+      "name": "The Wire",
+      "domain": "thewire.in",
+      "homepage": "https://thewire.in/",
+      "group": "left",
+      "rating_source": "Media Bias Fact Check (search; direct profile not verified)",
+      "rating_url": "https://mediabiasfactcheck.com/?s=the+wire+india",
+      "rating_verified": false
+    },
+    {
+      "id": "scroll",
+      "name": "Scroll",
+      "domain": "scroll.in",
+      "homepage": "https://scroll.in/",
+      "group": "left",
+      "rating_source": "Media Bias Fact Check (search; direct profile not verified)",
+      "rating_url": "https://mediabiasfactcheck.com/?s=scroll.in",
+      "rating_verified": false
+    },
+    {
+      "id": "brut-india",
+      "name": "Brut India",
+      "domain": "brut.media",
+      "homepage": "https://www.brut.media/in",
+      "group": "left",
+      "rating_source": "Media Bias Fact Check (not directly rated)",
+      "rating_url": "https://mediabiasfactcheck.com/?s=brut+india",
+      "rating_verified": false
+    },
+    {
+      "id": "newslaundry",
+      "name": "Newslaundry",
+      "domain": "newslaundry.com",
+      "homepage": "https://www.newslaundry.com/",
+      "group": "left",
+      "rating_source": "Media Bias Fact Check (search; direct profile not verified)",
+      "rating_url": "https://mediabiasfactcheck.com/?s=newslaundry",
+      "rating_verified": false
+    },
+    {
+      "id": "the-caravan",
+      "name": "The Caravan",
+      "domain": "caravanmagazine.in",
+      "homepage": "https://caravanmagazine.in/",
+      "group": "left",
+      "rating_source": "Media Bias Fact Check (not directly rated)",
+      "rating_url": "https://mediabiasfactcheck.com/?s=the+caravan+india",
+      "rating_verified": false
+    },
+    {
+      "id": "reuters-india",
+      "name": "Reuters India",
+      "domain": "reuters.com",
+      "homepage": "https://www.reuters.com/world/india/",
+      "group": "center",
+      "rating_source": "Media Bias Fact Check (search; direct profile not verified)",
+      "rating_url": "https://mediabiasfactcheck.com/?s=reuters",
+      "rating_verified": false
+    },
+    {
+      "id": "pti",
+      "name": "Press Trust of India",
+      "domain": "ptinews.com",
+      "homepage": "https://www.ptinews.com/",
+      "group": "center",
+      "rating_source": "Media Bias Fact Check (not directly rated)",
+      "rating_url": "https://mediabiasfactcheck.com/?s=press+trust+of+india",
+      "rating_verified": false
+    },
+    {
+      "id": "bbc-news-india",
+      "name": "BBC News India",
+      "domain": "bbc.com",
+      "homepage": "https://www.bbc.com/news/world/asia/india",
+      "group": "center",
+      "rating_source": "Media Bias Fact Check (search; direct profile not verified)",
+      "rating_url": "https://mediabiasfactcheck.com/?s=bbc+news",
+      "rating_verified": false
+    }
+  ]
+}

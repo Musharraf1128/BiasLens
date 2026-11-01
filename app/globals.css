@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Newsreader Variable", "Iowan Old Style", "Palatino Linotype",
+    Georgia, serif;
+  --font-sans: "Archivo Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "SFMono-Regular", "Cascadia Code", ui-monospace, monospace;
+
+  --color-paper: #f3efe4;
+  --color-paper-deep: #e9e2d2;
+  --color-ink: #14191c;
+  --color-ink-soft: #4e565a;
+  --color-teal: #0c5b54;
+  --color-teal-bright: #12756b;
+  --color-amber: #c58a2d;
+  --color-rule: #d6cdbb;
+  --color-alert: #9c302b;
+}
+
+@layer base {
+  html {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    min-height: 100vh;
+    background-image:
+      radial-gradient(
+        ellipse at 12% -8%,
+        rgba(197, 138, 45, 0.11),
+        transparent 42%
+      ),
+      radial-gradient(
+        ellipse at 88% 4%,
+        rgba(12, 91, 84, 0.08),
+        transparent 38%
+      );
+  }
+
+  ::selection {
+    background: var(--color-amber);
+    color: var(--color-ink);
+  }
+
+  a {
+    text-underline-offset: 0.22em;
+    text-decoration-thickness: 1px;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .grid-paper {
+    background-image:
+      linear-gradient(to right, rgba(20, 25, 28, 0.055) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(20, 25, 28, 0.055) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "biaslens",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run typecheck && npm run lint && npm run check:config",
+    "check:config": "node scripts/check-config.mjs",
+    "probe": "node --env-file=.env.local .opencode/skills/tinyfish/scripts/probe.mjs",
+    "probe:agent": "node --env-file=.env.local .opencode/skills/tinyfish/scripts/probe.mjs --agent",
+    "warm-demo": "node --env-file=.env.local scripts/warm-demo.mjs",
+    "capture-demo": "node scripts/capture-demo.mjs"
+  },
+  "dependencies": {
+    "@fontsource-variable/archivo": "^5.3.0",
+    "@fontsource-variable/newsreader": "^5.3.0",
+    "@tiny-fish/sdk": "^0.11.0",
+    "lucide-react": "^1.66.0",
+    "next": "^16.4.3",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "eslint": "^9.0.0",
+    "eslint-config-next": "^16.4.3",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^5.9.0"
+  }
+}

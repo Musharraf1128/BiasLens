@@ -1,0 +1,452 @@
+{
+  "id": "mock-parliament",
+  "cached_at": "2026-11-01T06:31:35.492Z",
+  "input": {
+    "type": "topic",
+    "value": "mock Parliament in India"
+  },
+  "notes": "Captured from a completed BiasLens analysis; derived results only.",
+  "result": {
+    "event": {
+      "event_id": "42c8237e-2ceb-449e-accd-84ac6d30c49b",
+      "canonical_title": "mock Parliament in India",
+      "query": "mock Parliament in India",
+      "timestamp_updated": "2026-11-01T06:31:29.933Z"
+    },
+    "payload": {
+      "event_id": "42c8237e-2ceb-449e-accd-84ac6d30c49b",
+      "canonical_title": "mock Parliament in India",
+      "timestamp_updated": "2026-11-01T06:31:35.446Z",
+      "consensus_fact_core": [],
+      "blind_spot_alerts": [],
+      "spectrum_breakdown": {
+        "left": {
+          "article_count": 0,
+          "average_slant_score": 0,
+          "dominant_mfc_frame": "Other",
+          "perspective_summary": "",
+          "detected_persuasion_techniques": [],
+          "key_entity_roles": []
+        },
+        "center": {
+          "article_count": 0,
+          "average_slant_score": 0,
+          "dominant_mfc_frame": "Other",
+          "perspective_summary": "",
+          "detected_persuasion_techniques": [],
+          "key_entity_roles": []
+        },
+        "right": {
+          "article_count": 0,
+          "average_slant_score": 0,
+          "dominant_mfc_frame": "Other",
+          "perspective_summary": "",
+          "detected_persuasion_techniques": [],
+          "key_entity_roles": []
+        }
+      }
+    },
+    "facts": [],
+    "outlets": [
+      {
+        "outletId": "the-hindu",
+        "name": "The Hindu",
+        "domain": "thehindu.com",
+        "homepage": "https://www.thehindu.com/",
+        "group": "left",
+        "rating_source": "Media Bias Fact Check",
+        "rating_url": "https://mediabiasfactcheck.com/the-hindu/",
+        "searched": true,
+        "search_source": "live",
+        "search_results": 0,
+        "articles": [],
+        "covered": false
+      },
+      {
+        "outletId": "indian-express",
+        "name": "The Indian Express",
+        "domain": "indianexpress.com",
+        "homepage": "https://indianexpress.com/",
+        "group": "left",
+        "rating_source": "Media Bias Fact Check",
+        "rating_url": "https://mediabiasfactcheck.com/the-indian-express/",
+        "searched": true,
+        "search_source": "live",
+        "search_results": 0,
+        "articles": [],
+        "covered": false
+      },
+      {
+        "outletId": "ndtv",
+        "name": "NDTV",
+        "domain": "ndtv.com",
+        "homepage": "https://www.ndtv.com/",
+        "group": "left",
+        "rating_source": "Media Bias Fact Check",
+        "rating_url": "https://mediabiasfactcheck.com/ndtv/",
+        "searched": true,
+        "search_source": "live",
+        "search_results": 0,
+        "articles": [],
+        "covered": false
+      },
+      {
+        "outletId": "zee-news",
+        "name": "Zee News",
+        "domain": "zeenews.india.com",
+        "homepage": "https://zeenews.india.com/",
+        "group": "right",
+        "rating_source": "Media Bias Fact Check (search; direct profile not found)",
+        "rating_url": "https://mediabiasfactcheck.com/?s=zee+news",
+        "searched": true,
+        "search_source": "live",
+        "search_results": 0,
+        "articles": [],
+        "covered": false
+      },
+      {
+        "outletId": "times-of-india",
+        "name": "The Times of India",
+        "domain": "timesofindia.indiatimes.com",
+        "homepage": "https://timesofindia.indiatimes.com/",
+        "group": "right",
+        "rating_source": "Media Bias Fact Check",
+        "rating_url": "https://mediabiasfactcheck.com/times-of-india/",
+        "searched": true,
+        "search_source": "live",
+        "search_results": 0,
+        "articles": [],
+        "covered": false
+      },
+      {
+        "outletId": "republic-world",
+        "name": "Republic World",
+        "domain": "republicworld.com",
+        "homepage": "https://www.republicworld.com/",
+        "group": "right",
+        "rating_source": "Media Bias Fact Check",
+        "rating_url": "https://mediabiasfactcheck.com/republic-world/",
+        "searched": true,
+        "search_source": "live",
+        "search_results": 0,
+        "articles": [],
+        "covered": false
+      },
+      {
+        "outletId": "india-today",
+        "name": "India Today",
+        "domain": "indiatoday.in",
+        "homepage": "https://www.indiatoday.in/",
+        "group": "right",
+        "rating_source": "Media Bias Fact Check",
+        "rating_url": "https://mediabiasfactcheck.com/india-today/",
+        "searched": true,
+        "search_source": "live",
+        "search_results": 0,
+        "articles": [],
+        "covered": false
+      }
+    ],
+    "blind_spots": [
+      {
+        "group": "left",
+        "status": "quiet",
+        "omission_index": 0,
+        "overall_coverage": 0,
+        "claim_support": 0,
+        "coverage": {
+          "covered": 0,
+          "monitored": 3
+        },
+        "description": "No other group covered this event, so there is nothing to compare against.",
+        "evidence": [],
+        "notes": []
+      },
+      {
+        "group": "center",
+        "status": "quiet",
+        "omission_index": 0,
+        "overall_coverage": 0,
+        "claim_support": 0,
+        "coverage": {
+          "covered": 0,
+          "monitored": 0
+        },
+        "description": "No monitored outlets in the Mixed group.",
+        "evidence": [],
+        "notes": []
+      },
+      {
+        "group": "right",
+        "status": "quiet",
+        "omission_index": 0,
+        "overall_coverage": 0,
+        "claim_support": 0,
+        "coverage": {
+          "covered": 0,
+          "monitored": 4
+        },
+        "description": "No other group covered this event, so there is nothing to compare against.",
+        "evidence": [],
+        "notes": []
+      }
+    ],
+    "consensus": {
+      "covering_outlets": 0,
+      "monitored_outlets": 7,
+      "consensus_share": 0.6,
+      "total_claims": 0
+    },
+    "mode": {
+      "llm": "mock",
+      "llm_model": null,
+      "tinyfish": "live",
+      "replay": false
+    },
+    "generated_at": "2026-11-01T06:31:35.446Z",
+    "duration_ms": 5515,
+    "caveats": [
+      "Results hold only for this event, these 7 outlets, and a 7-day search window.",
+      "\"Consensus\" means reported by at least 60% of the outlets that covered the event. It is not a claim of objectivity.",
+      "Frame, persuasion, and slant labels are model estimates; every label links to a quoted excerpt.",
+      "Group sizes: government-critical 3, government-aligned 4, mixed 0. With 3 outlets, the smallest group's coverage moves in discrete steps.",
+      "LLM stages ran in mock mode: labels come from deterministic fixtures, not live analysis.",
+      "Fewer than two outlets covered this event, so no cross-outlet consensus is shown.",
+      "No consensus facts reached the support threshold for this run."
+    ],
+    "activity": [
+      {
+        "type": "stage",
+        "stage": "anchor",
+        "status": "start",
+        "message": "Anchoring the event",
+        "at": "2026-11-01T06:31:29.932Z"
+      },
+      {
+        "type": "stage",
+        "stage": "anchor",
+        "status": "done",
+        "message": "Anchoring the event",
+        "at": "2026-11-01T06:31:29.934Z",
+        "duration_ms": 2
+      },
+      {
+        "type": "stage",
+        "stage": "search",
+        "status": "start",
+        "message": "Searching 7 outlet domains",
+        "at": "2026-11-01T06:31:29.934Z"
+      },
+      {
+        "type": "outlet",
+        "outletId": "the-hindu",
+        "name": "The Hindu",
+        "domain": "thehindu.com",
+        "group": "left",
+        "phase": "searching",
+        "at": "2026-11-01T06:31:29.935Z",
+        "detail": "mock Parliament in India"
+      },
+      {
+        "type": "outlet",
+        "outletId": "indian-express",
+        "name": "The Indian Express",
+        "domain": "indianexpress.com",
+        "group": "left",
+        "phase": "searching",
+        "at": "2026-11-01T06:31:29.936Z",
+        "detail": "mock Parliament in India"
+      },
+      {
+        "type": "outlet",
+        "outletId": "ndtv",
+        "name": "NDTV",
+        "domain": "ndtv.com",
+        "group": "left",
+        "phase": "searching",
+        "at": "2026-11-01T06:31:29.937Z",
+        "detail": "mock Parliament in India"
+      },
+      {
+        "type": "outlet",
+        "outletId": "zee-news",
+        "name": "Zee News",
+        "domain": "zeenews.india.com",
+        "group": "right",
+        "phase": "searching",
+        "at": "2026-11-01T06:31:29.937Z",
+        "detail": "mock Parliament in India"
+      },
+      {
+        "type": "outlet",
+        "outletId": "the-hindu",
+        "name": "The Hindu",
+        "domain": "thehindu.com",
+        "group": "left",
+        "phase": "no_results",
+        "at": "2026-11-01T06:31:32.621Z",
+        "count": 0,
+        "source": "live"
+      },
+      {
+        "type": "outlet",
+        "outletId": "times-of-india",
+        "name": "The Times of India",
+        "domain": "timesofindia.indiatimes.com",
+        "group": "right",
+        "phase": "searching",
+        "at": "2026-11-01T06:31:32.621Z",
+        "detail": "mock Parliament in India"
+      },
+      {
+        "type": "outlet",
+        "outletId": "indian-express",
+        "name": "The Indian Express",
+        "domain": "indianexpress.com",
+        "group": "left",
+        "phase": "no_results",
+        "at": "2026-11-01T06:31:33.035Z",
+        "count": 0,
+        "source": "live"
+      },
+      {
+        "type": "outlet",
+        "outletId": "republic-world",
+        "name": "Republic World",
+        "domain": "republicworld.com",
+        "group": "right",
+        "phase": "searching",
+        "at": "2026-11-01T06:31:33.036Z",
+        "detail": "mock Parliament in India"
+      },
+      {
+        "type": "outlet",
+        "outletId": "zee-news",
+        "name": "Zee News",
+        "domain": "zeenews.india.com",
+        "group": "right",
+        "phase": "no_results",
+        "at": "2026-11-01T06:31:33.036Z",
+        "count": 0,
+        "source": "live"
+      },
+      {
+        "type": "outlet",
+        "outletId": "india-today",
+        "name": "India Today",
+        "domain": "indiatoday.in",
+        "group": "right",
+        "phase": "searching",
+        "at": "2026-11-01T06:31:33.037Z",
+        "detail": "mock Parliament in India"
+      },
+      {
+        "type": "outlet",
+        "outletId": "ndtv",
+        "name": "NDTV",
+        "domain": "ndtv.com",
+        "group": "left",
+        "phase": "no_results",
+        "at": "2026-11-01T06:31:33.435Z",
+        "count": 0,
+        "source": "live"
+      },
+      {
+        "type": "outlet",
+        "outletId": "times-of-india",
+        "name": "The Times of India",
+        "domain": "timesofindia.indiatimes.com",
+        "group": "right",
+        "phase": "no_results",
+        "at": "2026-11-01T06:31:33.954Z",
+        "count": 0,
+        "source": "live"
+      },
+      {
+        "type": "outlet",
+        "outletId": "republic-world",
+        "name": "Republic World",
+        "domain": "republicworld.com",
+        "group": "right",
+        "phase": "no_results",
+        "at": "2026-11-01T06:31:35.080Z",
+        "count": 0,
+        "source": "live"
+      },
+      {
+        "type": "outlet",
+        "outletId": "india-today",
+        "name": "India Today",
+        "domain": "indiatoday.in",
+        "group": "right",
+        "phase": "no_results",
+        "at": "2026-11-01T06:31:35.443Z",
+        "count": 0,
+        "source": "live"
+      },
+      {
+        "type": "stage",
+        "stage": "search",
+        "status": "done",
+        "message": "Searching 7 outlet domains",
+        "at": "2026-11-01T06:31:35.443Z",
+        "duration_ms": 5509
+      },
+      {
+        "type": "log",
+        "message": "No article URLs were returned by any outlet search.",
+        "at": "2026-11-01T06:31:35.443Z"
+      },
+      {
+        "type": "stage",
+        "stage": "analysis",
+        "status": "start",
+        "message": "Checking relevance, claims, and framing for 0 articles",
+        "at": "2026-11-01T06:31:35.444Z"
+      },
+      {
+        "type": "stage",
+        "stage": "analysis",
+        "status": "done",
+        "message": "Checking relevance, claims, and framing for 0 articles",
+        "at": "2026-11-01T06:31:35.444Z",
+        "duration_ms": 1
+      },
+      {
+        "type": "stage",
+        "stage": "consensus",
+        "status": "start",
+        "message": "Building the consensus fact core",
+        "at": "2026-11-01T06:31:35.444Z"
+      },
+      {
+        "type": "stage",
+        "stage": "consensus",
+        "status": "done",
+        "message": "Building the consensus fact core",
+        "at": "2026-11-01T06:31:35.445Z",
+        "duration_ms": 1
+      },
+      {
+        "type": "log",
+        "message": "Fewer than two outlets covered this event, so there is no cross-outlet consensus to report.",
+        "at": "2026-11-01T06:31:35.445Z"
+      },
+      {
+        "type": "stage",
+        "stage": "blindspot",
+        "status": "start",
+        "message": "Checking coverage gaps",
+        "at": "2026-11-01T06:31:35.446Z"
+      },
+      {
+        "type": "stage",
+        "stage": "blindspot",
+        "status": "done",
+        "message": "Checking coverage gaps",
+        "at": "2026-11-01T06:31:35.446Z",
+        "duration_ms": 0
+      }
+    ]
+  }
+}
