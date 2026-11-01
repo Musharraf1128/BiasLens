@@ -2,6 +2,14 @@
 
 ## See the story behind the story.
 
+<p align="center">
+  <a href="artifacts/biaslens_demo.mp4">
+    <img src="artifacts/biaslens_demo_thumbnail.jpg" alt="Click to play the BiasLens demo" width="960">
+  </a>
+</p>
+
+<p align="center"><strong>▶ Click the thumbnail to play the 2:50 walkthrough</strong></p>
+
 One event can become fifteen different headlines. BiasLens lets you compare
 those headlines without pretending that one model can produce a perfectly
 objective version of the news.
@@ -34,7 +42,7 @@ what was found for the configured outlets and time window.
 
 ## The 90-second demo
 
-> 🎥 **Watch the walkthrough:** [BiasLens demo video](artifacts/biaslens_demo.mkv)
+> 🎥 **Watch the walkthrough:** [Play the MP4](artifacts/biaslens_demo.mp4) · [download the original MKV](artifacts/biaslens_demo.mkv)
 
 ### 1. Start with the news, not a blank input
 
